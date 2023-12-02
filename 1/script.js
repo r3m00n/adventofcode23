@@ -1,7 +1,6 @@
 import { input1, input2 } from './input.js';
 
 const digitMapping = {
-  zero: '0',
   one: '1',
   two: '2',
   three: '3',
@@ -36,7 +35,7 @@ const add1 = values => {
 };
 
 const firstDigit2 = str => {
-  const digitMatches = str.match(/(?:zero|one|two|three|four|five|six|seven|eight|nine|\d)/i);
+  const digitMatches = str.match(/(?:one|two|three|four|five|six|seven|eight|nine|\d)/i);
   if (digitMatches) {
     const matchedDigit = digitMatches[0].toLowerCase();
     return digitMapping[matchedDigit] || matchedDigit;
@@ -44,7 +43,7 @@ const firstDigit2 = str => {
 };
 
 const lastDigit2 = str => {
-  const digitMatches = str.match(/(?:zero|one|two|three|four|five|six|seven|eight|nine|\d)/gi);
+  const digitMatches = str.match(/(?:one|two|three|four|five|six|seven|eight|nine|\d)/gi);
 
   if (digitMatches) {
     const lastMatchedDigit = digitMatches[digitMatches.length - 1].toLowerCase();
